@@ -49,7 +49,7 @@ const Footer = () => {
                 <div className="flex flex-row items-center sm:items-start mt-4 sm:mt-0 space-x-8 items-center">
                   <a href="#faq" className="py-1 hover:text-hackathon-darkorange transition-colors">FAQ</a>
                   <a href="#team" className="py-1 hover:text-hackathon-darkorange transition-colors">Team</a>
-                  <a href="/coming-soon" className="py-1 hover:text-hackathon-darkorange transition-colors">Schedule</a>
+                  <a href="#judges" className="py-1 hover:text-hackathon-darkorange transition-colors">Judges</a>
                 </div>
               </nav>
             </div>

@@ -41,11 +41,11 @@ const faqItems = [
   },
   {
     question: "Will this hackathon be hosted virtually?",
-    answer: "No, this year our hackathon will be hosted entirely in person."
+    answer: "Yes, this year our hackathon will be entirely online."
   },
   {
     question: "I have a question that's not answered here!",
-    answer: "Feel free to reach out to us at team@recesshacks.com or message us on Instagram @recesshacks. We're happy to help!"
+    answer: "Feel free to reach out to us at recesshacks@gmail.com or message us on Instagram @recesshacks. We're happy to help!"
   }
 ];
 

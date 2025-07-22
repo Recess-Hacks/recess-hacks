@@ -35,7 +35,7 @@ export default function JudgesSection() {
   };
 
   return (
-    <section className="px-20 relative overflow-hidden">
+    <section className="px-20 relative overflow-hidden" id="judges">
       <div className="max-w-4xl mx-auto rounded-3xl p-8">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-3xl">

@@ -81,9 +81,9 @@ const Navbar = () => {
   const navItems = [
     { name: "About", link: "/#about" },
     { name: "Location", link: "/#location" },
-    { name: "Schedule", link: days > 0 ? '/coming-soon' : '/login' },
     { name: "Stats", link: "/#stats" },
     { name: "Sponsors", link: "/#sponsors" },
+    { name: "Judges", link: '/#judges' },
     { name: "Team", link: "/#teams" },
     { name: "FAQ", link: "/#faq" }
   ];

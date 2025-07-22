@@ -121,7 +121,7 @@ const About = () => {
             <div className="max-w-2xl mb-16 text-left left-[3rem] bg-white p-12 rounded-xl">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">About Recess Hacks</h2>
               <p className="text-lg text-foreground/80">
-              Recess Hacks 5.0 is our first-ever in-person hackathon, running from August 24 - 25 in Toronto! Open to all high school students, participants can join solo or in teams of up to 4 to build innovative projects, attend workshops, win prizes, and most importantly—have fun! While we’re proudly based in Canada, this year we’re also welcoming international participants. Founded in 2021, Recess Hacks is now celebrating its 5th edition with more excitement than ever!
+              Recess Hacks 5.0 is fifth iteration of Recess Hacks, running from August 24 - 25 virtually! Open to all high school students, participants can join solo or in teams of up to 4 to build innovative projects, attend workshops, win prizes, and most importantly—have fun! While we’re proudly based in Canada, this year we’re also welcoming international participants. Founded in 2021, Recess Hacks is now celebrating its 5th edition with more excitement than ever!
               </p>
               <a 
                 className='text-blue-600 flex items-center mt-4 -mb-4 group transition-all duration-300 hover:text-blue-800 w-fit'
@@ -195,7 +195,7 @@ const About = () => {
               icon={features[0].icon}
               title={features[0].title}
               description={features[0].description}
-              className="animate-fade-in"
+              className="animate-fade-in border-0"
             />
           </ScrollReveal>
 
@@ -204,7 +204,7 @@ const About = () => {
                 icon={features[1].icon}
                 title={features[1].title}
                 description={features[1].description}
-                className="animate-fade-in"
+                className="animate-fade-in border-0"
               />
           </ScrollReveal>
 
@@ -213,7 +213,7 @@ const About = () => {
                 icon={features[2].icon}
                 title={features[2].title}
                 description={features[2].description}
-                className="animate-fade-in"
+                className="animate-fade-in border-0"
               />
           </ScrollReveal>
         </div>
