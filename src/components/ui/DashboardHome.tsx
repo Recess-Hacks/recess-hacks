@@ -82,7 +82,16 @@ export default function DashboardHome() {
                     <h2 className="text-gray-600 font-semibold text-2xl">Application status</h2>
                     <Icon icon="fluent:form-multiple-48-filled" className="text-gray-500 text-4xl"/>
                 </div>
-                {(applicationStatus?.status === "unsubmitted" || !applicationStatus) &&
+                {
+                    <>
+                        <h1 className="text-green-600 font-bold text-4xl md:text-5xl pt-6">Submitted</h1>
+                        <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
+                            Your registration has been submitted. We hope your hardwork and creativity pay off
+                            with amazing projects at the hackathon!
+                        </p>
+                    </>
+                }
+                {/* {(applicationStatus?.status === "unsubmitted" || !applicationStatus) &&
                     <>
                         <h1 className="text-secondary-600 font-bold text-4xl md:text-5xl pt-6">Not submitted</h1>
                         <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
@@ -93,7 +102,7 @@ export default function DashboardHome() {
                             Open application
                         </Link>
                     </>
-                }
+                } 
                 {applicationStatus?.status === "submitted" &&
                     <>
                         <h1 className="text-secondary-600 font-bold text-4xl md:text-5xl pt-6">Submitted</h1>
@@ -140,7 +149,7 @@ export default function DashboardHome() {
                             We're sorry, but your application has been rejected.
                         </p>
                     </>
-                }
+                } */}
             </div>
             <div className="flex 2xl:flex-row flex-col gap-8 mt-8">
                 <div className="border border-gray-300 rounded-lg bg-gray-50 py-8 px-12 flex-1 overflow-hidden bg-gradient-to-t from-orange-100 to-yellow-50">
@@ -150,7 +159,7 @@ export default function DashboardHome() {
                     </div>
                     <DeadlineCountdown/>
                     <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
-                        Applications will remain open until the day of the hackathon.<br/>They are due on April 4th,
+                        Applications will remain open until the day of the hackathon.<br/>They are due on August 22,
                         2025 at 11:59 PM EST.
                     </p>
                 </div>
