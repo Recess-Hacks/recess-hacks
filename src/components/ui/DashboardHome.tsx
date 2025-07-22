@@ -183,7 +183,7 @@ export default function DashboardHome() {
                     </p>
                     {// applicationStatus?.status === "accepted" &&
                         <a href="https://discord.gg/8tnzYUBYg3" target="_blank" rel="noopener noreferrer"
-                           className="bg-orange-500 text-xl py-2 px-4 rounded-lg text-gray-100 font-medium hover:bg-[#815eeb] duration-200">
+                           className="bg-orange-500 text-xl py-2 px-4 rounded-lg text-gray-100 font-medium hover:bg-orange-600 duration-200">
                             Discord
                         </a>
                     }
@@ -206,7 +206,7 @@ export default function DashboardHome() {
                     </p>
                     { // applicationStatus?.status === "accepted" &&
                         <Link
-                            className="bg-orange-500 text-xl py-2 px-4 rounded-lg text-gray-100 font-medium hover:bg-[#815eeb] duration-200"
+                            className="bg-orange-500 text-xl py-2 px-4 rounded-lg text-gray-100 font-medium hover:bg-orange-600 duration-200"
                             href="/hacker-package.pdf" target="_blank" rel="noopener noreferrer">
                             View
                         </Link>
