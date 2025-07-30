@@ -197,17 +197,17 @@ export default function DashboardHome() {
                 </div>
                 <div className="border border-gray-300 rounded-lg bg-gray-50 py-8 px-12 flex-1 overflow-hidden bg-gradient-to-l from-orange-100 to-yellow-50">
                     <div className="flex justify-between">
-                        <h2 className="text-gray-600 font-semibold text-2xl">Hacker package</h2>
+                        <h2 className="text-gray-600 font-semibold text-2xl">Devpost</h2>
                         <Icon icon="fluent:book-information-20-filled" className="text-gray-500 text-4xl"/>
                     </div>
-                    <h1 className="text-secondary-600 font-bold text-5xl pt-6">View hacker package</h1>
+                    <h1 className="text-secondary-600 font-bold text-5xl pt-6">View devpost page</h1>
                     <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
-                        View the hacker package, complete with event info and schedules for RecessHacks 2025.
+                        View the devpost, complete with event info and prizes for RecessHacks 2025.
                     </p>
                     { // applicationStatus?.status === "accepted" &&
                         <Link
                             className="bg-orange-500 text-xl py-2 px-4 rounded-lg text-gray-100 font-medium hover:bg-orange-600 duration-200"
-                            href="/hacker-package.pdf" target="_blank" rel="noopener noreferrer">
+                            href="https://recess-hacks-5-0.devpost.com/" target="_blank" rel="noopener noreferrer">
                             View
                         </Link>
                     }
