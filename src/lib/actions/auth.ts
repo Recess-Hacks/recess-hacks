@@ -330,6 +330,74 @@ const sendVerificationEmail = async ({emailVerificationToken, firstName, email}:
     await sendMailAsync(transporter, mailOptions);
 };
 
+interface SendFollowUpEmailProps {
+    firstName: string;
+    email: string;
+    devpostLink: string;
+    discordInviteLink: string;
+}
+
+const sendFollowUpEmail = async ({ firstName, email, devpostLink, discordInviteLink }: SendFollowUpEmailProps) => {
+    const transporter = NodeMailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number.parseInt(process.env.SMTP_PORT || "587"),
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    })
+  
+    const headersList = await headers()
+    const domain = headersList.get("host")
+  
+    const emailHTML = await render(
+      FollowUpEmailTemplate({
+        userFirstname: firstName,
+        devpostLink,
+        discordInviteLink,
+      }),
+    )
+  
+    const emailText = `
+  Hi ${firstName},
+  
+  Welcome to RecessHacks! 🎉
+  
+  Now that your email is verified, here are the next steps to get you ready for the hackathon:
+  
+  🚀 JOIN OUR DEVPOST: ${devpostLink}
+  This is where you'll submit your project, find teammates, and access all hackathon resources.
+  
+  💬 JOIN OUR DISCORD: ${discordInviteLink}
+  Connect with other participants, get real-time updates, and ask questions to our team.
+  
+  What's Next:
+  1. Complete your Devpost profile
+  2. Join our Discord server and introduce yourself
+  3. Start brainstorming your project ideas
+  4. Form your team (or join one!)
+  
+  We're excited to see what you'll build at RecessHacks!
+  
+  Best regards,
+  The RecessHacks Team
+    `
+  
+    const mailOptions = {
+      to: email,
+      from: `"RecessHacks" <recesshacks@gmail.com>`,
+      subject: "🎉 Welcome to RecessHacks - Join Devpost & Discord!",
+      text: emailText,
+      html: emailHTML,
+    }
+  
+    await sendMailAsync(transporter, mailOptions)
+}
+
 export const requestPasswordReset = async (prevState: any, formData: FormData) => {
     const email = formData.get("email");
 

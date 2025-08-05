@@ -29,6 +29,24 @@ const judges = [
     image: "Kingston.png",
     color: "from-purple-500 to-pink-500",
   },
+  {
+    name: "Wenyu Chen",
+    title: "Financial Quantitative Analyst based in NYC",
+    image: "Wenyu.png",
+    color: "from-yellow-400 to-red-600",
+  },
+  {
+    name: "Naveen Kolli",
+    title: "Data Architecture and Analytics Modernization at Fortune 100",
+    image: "Naveen.png",
+    color: "from-pink-500 to-purple-600",
+  },
+  {
+    name: "Ashwini Joshi",
+    title: "AI and Ml at Indian Space Research Organisation",
+    image: "Ashwini.png",
+    color: "from-indigo-500 to-blue-500",
+  },
 ]
 
 export default function JudgesSection() {
