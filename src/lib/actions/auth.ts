@@ -19,6 +19,7 @@ import { redirect } from "next/navigation";
 import { headers } from "next/headers";
 import { render } from "@react-email/components";
 import { VerifyEmailTemplate } from "@/lib/emails/verify-email";
+import { FollowUpEmailTemplate } from "@/lib/emails/follow-up-email-template";
 import { cookies } from "next/headers";
 import { verify } from "@node-rs/argon2";
 import { createSession, invalidateSession } from "@/lib/sessions";
