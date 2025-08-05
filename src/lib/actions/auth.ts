@@ -358,6 +358,8 @@ export const sendFollowUpEmail = async ({ firstName, email, devpostLink, discord
     const emailHTML = await render(
       FollowUpEmailTemplate({
         userFirstname: firstName,
+        devpostLink: devpostLink,
+        discordInviteLink: discordInviteLink,
       }),
     )
   
