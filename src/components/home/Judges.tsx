@@ -23,6 +23,12 @@ const judges = [
     image: "Teo.png",
     color: "from-green-500 to-emerald-500",
   },
+  {
+    name: "Kingston Kuan",
+    title: "Senior Software Engineer at Jane Street",
+    image: "Kingston.png",
+    color: "from-purple-500 to-pink-500",
+  },
 ]
 
 export default function JudgesSection() {
