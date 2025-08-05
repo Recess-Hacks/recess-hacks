@@ -4,11 +4,13 @@ import Link from "next/link";
 import {
     deleteAllEmailVerificationTokensByUserID,
     getEmailVerificationTokenByToken,
-    verifyUserEmail
+    verifyUserEmail,
+    getUserByID
 } from "@/lib/sqlc/auth_sql";
 import { generateSessionToken } from "@/lib/auth";
 import { createSession } from "@/lib/sessions";
 import SetSessionCookie from "@/components/SetSessionCookie";
+import { sendFollowUpEmail } from "@/lib/actions/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -52,9 +54,26 @@ export default async function VerifyEmailPage({ searchParams, }: {
         }
 
         if (valid && token) {
+            const user = await getUserByID(db, { id: token.userId });
+            if (!user) {
+                redirect("/login");
+            }
+
+            await verifyUserEmail(db, { id: token.userId });
+            await deleteAllEmailVerificationTokensByUserID(db, {
+              userId: token.userId
+            });
+      
             sessionToken = await generateSessionToken();
             await createSession(sessionToken, token.userId);
-        }
+      
+            await sendFollowUpEmail({
+              firstName: user.firstName!,
+              email: user.email!,
+              devpostLink: "https://recess-hacks-5-0.devpost.com",
+              discordInviteLink: "https://discord.gg/RrCY76mefj ",
+            });
+          }
     } catch (error) {
         console.log(error);
         redirect("/login");

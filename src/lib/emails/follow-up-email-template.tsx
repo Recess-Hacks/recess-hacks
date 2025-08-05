@@ -2,14 +2,10 @@ import { Body, Button, Container, Head, Heading, Html, Img, Preview, Section, Te
 
 interface FollowUpEmailTemplateProps {
   userFirstname: string
-  devpostLink: string
-  discordInviteLink: string
 }
 
 export const FollowUpEmailTemplate = ({
   userFirstname,
-  devpostLink,
-  discordInviteLink,
 }: FollowUpEmailTemplateProps) => (
   <Html>
     <Head />
@@ -30,7 +26,7 @@ export const FollowUpEmailTemplate = ({
         </Text>
 
         <Section style={buttonContainer}>
-          <Button style={devpostButton} href={devpostLink}>
+          <Button style={devpostButton} href={"https://recess-hacks-5-0.devpost.com/"}>
             🚀 Join Our Devpost
           </Button>
         </Section>
@@ -41,7 +37,7 @@ export const FollowUpEmailTemplate = ({
         </Text>
 
         <Section style={buttonContainer}>
-          <Button style={discordButton} href={discordInviteLink}>
+          <Button style={discordButton} href={"https://discord.gg/RrCY76mefj"}>
             💬 Join Our Discord
           </Button>
         </Section>

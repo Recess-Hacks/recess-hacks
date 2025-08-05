@@ -338,7 +338,7 @@ interface SendFollowUpEmailProps {
     discordInviteLink: string;
 }
 
-const sendFollowUpEmail = async ({ firstName, email, devpostLink, discordInviteLink }: SendFollowUpEmailProps) => {
+export const sendFollowUpEmail = async ({ firstName, email, devpostLink, discordInviteLink }: SendFollowUpEmailProps) => {
     const transporter = NodeMailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number.parseInt(process.env.SMTP_PORT || "587"),
@@ -358,8 +358,6 @@ const sendFollowUpEmail = async ({ firstName, email, devpostLink, discordInviteL
     const emailHTML = await render(
       FollowUpEmailTemplate({
         userFirstname: firstName,
-        devpostLink,
-        discordInviteLink,
       }),
     )
   
