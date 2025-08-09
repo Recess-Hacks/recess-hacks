@@ -2,80 +2,85 @@ import React from 'react';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
 import Image from "next/image";
 
- const sponsors = [
+const sponsors = [
   {
-    name: "Wolfram",
-    tier: "platinum",
-    logo: `wolfram.png`,
-    url: "https://wolfram.com"
-  },
-  {
-    name: "Algoverse",
-    tier: "platinum",
-    logo: `Algoverse.jpg`,
-    url: "https://algoverseairesearch.org/"
-  },
-  {
-    name: "Interview Buddy",
-    tier: "gold",
-    logo: `Interview-Buddy.jpeg`,
-    url: "https://interviewbuddyai.com/"
-  },
-  {
-    name: "Verbwire",
-    tier: "gold",
-    logo: `Verbwire.png`,
-    url: "https://verbwire.com"
-  },
-  {
-    name: "1Password",
+    name: ".xyz",
     tier: "silver",
-    logo: `1Password.png`,
-    url: "https://1password.com"
+    logo: `xyz.png`,
+    url: "https://www.gen.xyz",
+    notes: "12 .xyz domains — code: RCH25"
   },
   {
-    name: "Aops",
-    tier: "silver",
-    logo: `Aops.png`,
-    url: "https://artofproblemsolving.com"
+    name: "Vue School",
+    tier: "bronze",
+    logo: `vueschool.png`,
+    url: "https://vueschool.io",
+    notes: "1 yearly Vue School license + 1 monthly Vue School license (email after event for the prize)"
   },
   {
-    name: "Axure",
-    tier: "silver",
-    logo: `Axure.png`,
-    url: "https://axure.com"
+    name: "Sublime Text",
+    tier: "bronze",
+    logo: `sublime-text.png`,
+    url: "https://www.sublimetext.com",
+    notes: "Up to 5 Sublime Text or Merge licenses"
   },
   {
-    name: "Dewey Smart",
+    name: "Sticker Giant",
     tier: "silver",
-    logo: `Dewey-Smart.png`,
-    url: "https://deweysmart.com"
+    logo: `sticker-giant.png`,
+    url: "https://www.stickergiant.com",
+    notes: "Coupon code: EVENTSTICKERS30 (30% off next purchase)"
   },
   {
-    name: "GMC",
-    tier: "silver",
-    logo: `Gmc.png`,
-    url: "https://givemycertificate.com/"
+    name: "CleanShot",
+    tier: "bronze",
+    logo: `cleanshot.png`,
+    url: "https://getcleanshot.com",
+    notes: "CleanShot X licenses — 12 total"
   },
   {
     name: "Interview Cake",
-    tier: "silver",
+    tier: "bronze",
     logo: `interview-cake.png`,
-    url: "https://interviewcake.com"
+    url: "https://interviewcake.com",
+    notes: "12 × 1-month Interview Cake licenses"
   },
   {
-    name: "TTmath",
-    tier: "silver",
-    logo: `TTmath.jpg`,
-    url: "https://www.ttmath.ca/en/"
+    name: "Code Crafters",
+    tier: "platinum",
+    logo: `codecrafters.png`,
+    url: "https://codecrafters.example/",
+    notes: "Prizes: 1st — 2-year VIP; 2nd — 1-year VIP; 3rd — 6-month VIP"
   },
   {
-    name: "Xyz",
+    name: "NordVPN",
+    tier: "gold",
+    logo: `nordvpn.png`,
+    url: "https://nordvpn.com",
+    notes: "1-year subscriptions + 1GB of free data for 6 winners"
+  },
+  {
+    name: "AoPS",
     tier: "silver",
-    logo: `xyz.png`,
-    url: "https://www.gen.xyz"
-  }    
- ];
+    logo: `Aops.png`,
+    url: "https://artofproblemsolving.com",
+    notes: "4 × $25 coupons"
+  },
+  {
+    name: "Lead Aces Academy",
+    tier: "bronze",
+    logo: `lead-aces.png`,
+    url: "https://leadaces.example/",
+    notes: "150 × $50 voucher coupons for courses"
+  },
+  {
+    name: "Nodalli",
+    tier: "platinum",
+    logo: `nodalli.png`,
+    url: "https://nodalli.example/",
+    notes: "Premium subscription to their AI platform"
+  }
+];
  
  const Sponsors = () => {
 
