@@ -60,6 +60,30 @@ const sponsors: Sponsor[] = [
     url: "https://nordvpn.com"
   },
   {
+    name: "NordProtect",
+    tier: "bronze",
+    logo: `NordProtect.png`,
+    url: "https://nordprotect.com/"
+  },
+  {
+    name: "NordPass",
+    tier: "bronze",
+    logo: `NordPass.png`,
+    url: "https://nordpass.com/"
+  },
+  {
+    name: "Incogni",
+    tier: "bronze",
+    logo: `Incogni.png`,
+    url: "https://incogni.com/"
+  },
+  {
+    name: "Saily",
+    tier: "bronze",
+    logo: `Saily.png`,
+    url: "https://saily.com/"
+  },
+  {
     name: "AoPS",
     tier: "bronze",
     logo: `Aops.png`,
