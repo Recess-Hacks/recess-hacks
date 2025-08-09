@@ -4,7 +4,7 @@ import "./global.css"
 
 export const metadata: Metadata = {
     title: "RecessHacks 2025",
-    description: "RecessHacks 5.0 is our first ever inperson hackaton. We are a highschool hackathon open to all students from August 23-24. Hours of coding, mentorship & fun (+ free food!)",
+    description: "RecessHacks 5.0 is our fifth ever iteration hackathon. We are a highschool hackathon open to all students from August 23-24. Hours of coding, mentorship & fun!",
     openGraph: {
         title: "RecessHacks 2025",
         type: "website",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
                 url: "https://recesshacks.org/logo.png",
             },
         ],
-        description: "RecessHacks 5.0 is our first ever inperson hackaton. We are a highschool hackathon open to all students from August 23-24. Hours of coding, mentorship & fun (+ free food!)",
+        description: "RecessHacks 5.0 is our fifth ever iteration hackathon. We are a highschool hackathon open to all students from August 23-24. Hours of coding, mentorship & fun!",
     }
 };
 
