@@ -14,7 +14,7 @@ const sponsors: Sponsor[] = [
   {
     name: ".xyz",
     tier: "bronze",
-    logo: `Xyz.png`,
+    logo: `xyz.png`,
     url: "https://www.gen.xyz"
   },
   {
@@ -44,7 +44,7 @@ const sponsors: Sponsor[] = [
   {
     name: "Interview Cake",
     tier: "platinum",
-    logo: `Interview-Cake.png`,
+    logo: `interview-cake.png`,
     url: "https://interviewcake.com"
   },
   {
