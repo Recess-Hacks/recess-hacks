@@ -79,8 +79,8 @@ export interface CreateApplicationRow {
     linkedinLink: string | null;
     portfolioLink: string | null;
     resumeLink: string | null;
-    emergencyContactFullName: string;
-    emergencyContactPhoneNumber: string;
+    // emergencyContactFullName: string;
+    // emergencyContactPhoneNumber: string;
     shortAnswerResponse: string;
     createdAt: Date;
     updatedAt: Date;
@@ -210,8 +210,8 @@ export interface GetAllAcceptedApplicationsRow {
     linkedinLink: string | null;
     portfolioLink: string | null;
     resumeLink: string | null;
-    emergencyContactFullName: string;
-    emergencyContactPhoneNumber: string;
+    // emergencyContactFullName: string;
+    // emergencyContactPhoneNumber: string;
     shortAnswerResponse: string;
     createdAt: Date;
     updatedAt: Date;
@@ -235,8 +235,8 @@ export async function getAllAcceptedApplications(sql: Sql): Promise<GetAllAccept
         linkedinLink: row[13],
         portfolioLink: row[14],
         resumeLink: row[15],
-        emergencyContactFullName: row[16],
-        emergencyContactPhoneNumber: row[17],
+        // emergencyContactFullName: row[16],
+        // emergencyContactPhoneNumber: row[17],
         shortAnswerResponse: row[18],
         createdAt: row[19],
         updatedAt: row[20]

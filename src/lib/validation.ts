@@ -75,11 +75,11 @@ export const applicationSchema = z.object({
     linkedin: z.string().url({message: "Invalid LinkedIn URL"}).or(z.string().length(0)),
     portfolio: z.string().url({message: "Invalid portfolio URL"}).or(z.string().length(0)),
     resume: z.string().url({message: "Invalid resume URL"}).or(z.string().length(0)),
-    emergencyContactFullName: z.string()
-        .min(1, {message: "Emergency contact full name is required."})
-        .max(128, {message: "Emergency contact full name must be less than 128 characters."}),
-    emergencyContactPhoneNumber: z.string()
-        .min(14, {message: "Please enter a valid phone number."})
-        .max(14, {message: "Please enter a valid phone number."}),
+    //emergencyContactFullName: z.string().optional()
+        //.min(1, {message: "Emergency contact full name is required."})
+        //.max(128, {message: "Emergency contact full name must be less than 128 characters."}),
+    //emergencyContactPhoneNumber: z.string().optional()
+        //.min(14, {message: "Please enter a valid phone number."})
+        //.max(14, {message: "Please enter a valid phone number."}),
 
 });

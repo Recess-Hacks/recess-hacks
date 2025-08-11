@@ -122,7 +122,7 @@ export default async function Application({
                 </div>
                 <hr className="mt-8 border-secondary-200"/>
                 {/*Emergency Contact*/}
-                <div className="mt-8">
+                {/* <div className="mt-8">
                     <h1 className="text-xl font-semibold">Emergency Contact</h1>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                         <ApplicationItem label="Full name" icon="icon-park-outline:edit-name"
@@ -131,9 +131,9 @@ export default async function Application({
                                          value={application.emergencyContactPhoneNumber}/>
                     </div>
                 </div>
-                <hr className="mt-8 border-secondary-200"/>
+                <hr className="mt-8 border-secondary-200"/> */}
                 {/*Links*/}
-                <div className="mt-8">
+                {/* <div className="mt-8">
                     <h1 className="text-xl font-semibold">Links</h1>
                     <div className="grid md:grid-cols-2 gap-4 mt-4">
                         <ApplicationLinkBox icon="mdi:github" label="GitHub" link={application.githubLink ?? "None"}/>
@@ -144,7 +144,7 @@ export default async function Application({
                         <ApplicationLinkBox icon="fluent:document-one-page-16-regular" label="Resume"
                                             link={application.resumeLink ?? "None"}/>
                     </div>
-                </div>
+                </div> */}
                 <hr className="mt-8 border-secondary-200"/>
                 {/*Actions*/}
                 <ApplicationActionsForm id={application.id}/>
