@@ -14,7 +14,7 @@ import { sendMailAsync } from "@/lib/actions/auth";
 
 const safeParseNumber = (value: FormDataEntryValue | null) => {
     if (value === null) {
-        return null;
+        return '';
     }
     const parsed = parseInt(value as string, 10);
     return isNaN(parsed) ? null : parsed;
@@ -53,8 +53,8 @@ export const apply = async (_prevState: any, formData: FormData) => {
     const linkedin = formData.get("linkedin");
     const portfolio = formData.get("portfolio");
     const resume = formData.get("resume");
-    const emergencyContactFullName = formData.get("emergency-contact-full-name");
-    const emergencyContactPhone = formData.get("emergency-contact-phone");
+    // const emergencyContactFullName = formData.get("emergency-contact-full-name");
+    // const emergencyContactPhone = formData.get("emergency-contact-phone");
     const validationResult = applicationSchema.safeParse({
         firstName,
         lastName,
