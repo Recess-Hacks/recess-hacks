@@ -79,15 +79,15 @@ export interface CreateApplicationRow {
     linkedinLink: string | null;
     portfolioLink: string | null;
     resumeLink: string | null;
-    emergencyContactFullName: string;
-    emergencyContactPhoneNumber: string;
+    emergencyContactFullName: string | null;
+    emergencyContactPhoneNumber: string | null;
     shortAnswerResponse: string;
     createdAt: Date;
     updatedAt: Date;
 }
 
 export async function createApplication(sql: Sql, args: CreateApplicationArgs): Promise<void> {
-    await sql.unsafe(createApplicationQuery, [args.userId, args.status, args.firstName, args.lastName, args.email, args.age, args.school, args.yearOfGraduation, args.city, args.dietaryRestrictions, args.numberOfHackathonsAttended, args.githubLink, args.linkedinLink, args.portfolioLink, args.resumeLink, "", "", args.shortAnswerResponse]);
+    await sql.unsafe(createApplicationQuery, [args.userId, args.status, args.firstName, args.lastName, args.email, args.age, args.school, args.yearOfGraduation, args.city, args.dietaryRestrictions, args.numberOfHackathonsAttended, args.githubLink, args.linkedinLink, args.portfolioLink, args.resumeLink, null, null, args.shortAnswerResponse]);
 }
 
 export const getApplicationStatusQuery = `-- name: GetApplicationStatus :one
