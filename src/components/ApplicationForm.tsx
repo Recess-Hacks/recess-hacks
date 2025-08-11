@@ -19,10 +19,10 @@ const initialState = {
 
 export default function ApplicationForm() {
     const [state, formAction, pending] = useActionState(apply, initialState);
-    const defaultYears = ["2025", "2026", "2027", "2028", "other"];
+    const defaultYears = ["2026", "2027", "2028", "2029", "other"];
     const [graduationYear, setGraduationYear] = useState(
         defaultYears.includes(
-            state.payload?.get("graduation-year") as (string | undefined) ?? "") ?
+            (state.payload?.get("graduation-year") as (string | undefined)) ?? "") ?
             state.payload?.get("graduation-year") ?? undefined : undefined
     );
     const initialDietaryRestrictions: Record<string, boolean> = {};
@@ -30,7 +30,7 @@ export default function ApplicationForm() {
     const [dietaryRestrictions, setDietaryRestrictions] = useState(initialDietaryRestrictions);
     useEffect(() => {
         setGraduationYear(defaultYears.includes(
-            state.payload?.get("graduation-year") as (string | undefined) ?? "") ?
+            (state.payload?.get("graduation-year") as (string | undefined)) ?? "") ?
             state.payload?.get("graduation-year") ?? undefined : undefined
         );
         if (state.error) {
@@ -111,10 +111,10 @@ export default function ApplicationForm() {
                         </SelectTrigger>
                         <SelectContent>
                             <SelectGroup>
-                                <SelectItem value="2025">2025</SelectItem>
-                                <SelectItem value="2026">2026</SelectItem>
-                                <SelectItem value="2027">2027</SelectItem>
-                                <SelectItem value="2028">2028</SelectItem>
+                                <SelectItem value="2025">2026</SelectItem>
+                                <SelectItem value="2026">2027</SelectItem>
+                                <SelectItem value="2027">2028</SelectItem>
+                                <SelectItem value="2028">2029</SelectItem>
                                 <SelectItem value="other">Other</SelectItem>
                             </SelectGroup>
                         </SelectContent>
@@ -137,63 +137,8 @@ export default function ApplicationForm() {
                            label="Number of hackathons attended" type="number" min={0} required
                            name="number-hackathons-attended" placeholder={0}/>
                 </div>
-                {/* Short answer question */}
-                <div className="py-8">
-                    <label className="block text-lg font-medium">
-                        If you had to pitch your project idea to a panel of animals, which animals would you pick as judges and why?
-                    </label>
-                    <h3 className="font-medium text-gray-500">Max 900 characters</h3>
-                    <CharacterLimiter 
-                        defaultValue={state.payload?.get("short-answer")} 
-                        maxChars={900}
-                        label="Short answer" 
-                        name="short-answer" 
-                    />
-                </div>
-                <div>
-                    <label className="block text-lg font-medium">
-                        What is your go to comfort food?
-                    </label>
-                    <h3 className="font-medium text-gray-500">Max 400 characters</h3>
-                    <CharacterLimiter 
-                        defaultValue={state.payload?.get("short-answer")} 
-                        maxChars={400}
-                        label="Short answer" 
-                        name="short-answer" 
-                    />
-                </div>
-                <div>
-                    <h2 className="text-3xl font-semibold mt-8">Dietary Restrictions</h2>
-                    <h3 className="font-medium text-gray-500">Select all that apply</h3>
-                </div>
 
-                <div className="border rounded-md border-gray-300 py-4 px-6 grid gap-2 bg-white">
-                    {dietaryRestrictionsList.map((name, key) =>
-                        <div key={key} className="flex items-center gap-4 text-black">
-                            <Checkbox
-                                defaultChecked={dietaryRestrictions[name]}
-                                checked={dietaryRestrictions[name]}
-                                onCheckedChange={checked => setDietaryRestrictions({
-                                    ...dietaryRestrictions,
-                                    [name]: checked as boolean
-                                })}
-                                name={name}
-                                />
-                            <label>{name}</label>
-                        </div>
-                    )}
-                    {dietaryRestrictions["Other"] &&
-                        <>
-                          <Input
-                              defaultValue={state.payload?.get("other-dietary-restrictions")}
-                              type="text"
-                              required
-                              label="Other dietary restrictions"
-                              name="other-dietary-restrictions"
-                              placeholder="Please specify"/>
-                        </>
-                    }
-                </div>
+                {/* --- LONG ANSWER FIELDS REMOVED AS REQUESTED --- */}
 
                 <div>
                     <h2 className="text-3xl font-semibold mt-8">Socials</h2>
@@ -204,7 +149,7 @@ export default function ApplicationForm() {
                     type="url"
                     label="GitHub"
                     name="github"
-                    placeholder="https://github.com/torvalds"
+                    placeholder="https://github.com/recesshacks"
                     defaultValue={state.payload?.get("github")}
                 />
 
@@ -212,7 +157,7 @@ export default function ApplicationForm() {
                     type="url"
                     label="LinkedIn"
                     name="linkedin"
-                    placeholder="https://www.linkedin.com/in/williamhgates/"
+                    placeholder="https://www.linkedin.com/in/recesshacks/"
                     defaultValue={state.payload?.get("linkedin")}
                 />
 
@@ -220,7 +165,7 @@ export default function ApplicationForm() {
                     type="url"
                     label="Portfolio"
                     name="portfolio"
-                    placeholder="https://https://recess-hacks.onrender.com/"
+                    placeholder="https://www.recesshacks.org/"
                     defaultValue={state.payload?.get("portfolio")}
                 />
 
@@ -228,11 +173,12 @@ export default function ApplicationForm() {
                     type="url"
                     label="Link to resume"
                     name="resume"
-                    placeholder="https://https://recess-hacks.onrender.com//resume.pdf"
+                    placeholder="https://www.recesshacks.org/resume.pdf"
                     defaultValue={state.payload?.get("resume")}
                 />
 
-                <div className="mb-6">
+                {/* Emergency contact is intentionally commented out */}
+                {/* <div className="mb-6">
                     <h2 className="text-3xl font-semibold mt-8">Emergency Contact Information</h2>
                     <h3 className="font-medium text-gray-500">Include your parent/guardian's information here</h3>
                 </div>
@@ -252,7 +198,7 @@ export default function ApplicationForm() {
                         prev={state.payload?.get("emergency-contact-phone")}
                         required
                     />
-                </div>
+                </div> */}
             </div>
 
             <button

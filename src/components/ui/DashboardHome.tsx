@@ -82,16 +82,7 @@ export default function DashboardHome() {
                     <h2 className="text-gray-600 font-semibold text-2xl">Application status</h2>
                     <Icon icon="fluent:form-multiple-48-filled" className="text-gray-500 text-4xl"/>
                 </div>
-                {
-                    <>
-                        <h1 className="text-green-600 font-bold text-4xl md:text-5xl pt-6">Submitted</h1>
-                        <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
-                            Your registration has been submitted. We hope your hardwork and creativity pay off
-                            with amazing projects at the hackathon!
-                        </p>
-                    </>
-                }
-                {/* {(applicationStatus?.status === "unsubmitted" || !applicationStatus) &&
+                {(applicationStatus?.status === "unsubmitted" || !applicationStatus) &&
                     <>
                         <h1 className="text-secondary-600 font-bold text-4xl md:text-5xl pt-6">Not submitted</h1>
                         <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
@@ -107,12 +98,12 @@ export default function DashboardHome() {
                     <>
                         <h1 className="text-secondary-600 font-bold text-4xl md:text-5xl pt-6">Submitted</h1>
                         <p className="text-gray-600 text-lg pt-2 pb-8 font-medium">
-                            Your application has been submitted. We will review your application and get back to you
-                            soon.
+                            Your registration has been submitted. We hope your hardwork and creativity pay off
+                            with amazing projects at the hackathon!
                         </p>
                     </>
                 }
-                {applicationStatus?.status === "accepted" &&
+                {/* {applicationStatus?.status === "accepted" &&
                     <>
                         <h1 className="text-secondary-600 font-bold text-4xl md:text-5xl pt-6">Accepted</h1>
                         {!initialRsvpStatus && playConfetti &&
