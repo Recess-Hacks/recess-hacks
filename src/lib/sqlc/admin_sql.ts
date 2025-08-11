@@ -211,8 +211,8 @@ export interface GetApplicationByIdRow {
     linkedinLink: string | null;
     portfolioLink: string | null;
     resumeLink: string | null;
-    // emergencyContactFullName: string;
-    // emergencyContactPhoneNumber: string;
+    emergencyContactFullName: string;
+    emergencyContactPhoneNumber: string;
     shortAnswerResponse: string;
     createdAt: Date;
     updatedAt: Date;
@@ -242,8 +242,8 @@ export async function getApplicationById(sql: Sql, args: GetApplicationByIdArgs)
         linkedinLink: row[13],
         portfolioLink: row[14],
         resumeLink: row[15],
-        //emergencyContactFullName: row[16],
-        //emergencyContactPhoneNumber: row[17],
+        emergencyContactFullName: row[16],
+        emergencyContactPhoneNumber: row[17],
         shortAnswerResponse: row[18],
         createdAt: row[19],
         updatedAt: row[20],

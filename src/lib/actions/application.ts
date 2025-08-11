@@ -53,8 +53,8 @@ export const apply = async (_prevState: any, formData: FormData) => {
     const linkedin = formData.get("linkedin");
     const portfolio = formData.get("portfolio");
     const resume = formData.get("resume");
-    // const emergencyContactFullName = formData.get("emergency-contact-full-name");
-    // const emergencyContactPhone = formData.get("emergency-contact-phone");
+    const emergencyContactFullName = "";
+    const emergencyContactPhone = "";
     const validationResult = applicationSchema.safeParse({
         firstName,
         lastName,
@@ -75,8 +75,8 @@ export const apply = async (_prevState: any, formData: FormData) => {
         linkedin,
         portfolio,
         resume,
-        // emergencyContactFullName,
-        // emergencyContactPhoneNumber: emergencyContactPhone,
+        emergencyContactFullName,
+        emergencyContactPhoneNumber: emergencyContactPhone,
     });
 
     if (!validationResult.success) {
@@ -138,8 +138,8 @@ export const apply = async (_prevState: any, formData: FormData) => {
             numberOfHackathonsAttended: validationResult.data.numberHackathonsAttended,
             shortAnswerResponse: validationResult.data.shortAnswer,
             dietaryRestrictions: userDietaryRestrictions,
-            // emergencyContactFullName: validationResult.data.emergencyContactFullName,
-            // emergencyContactPhoneNumber: validationResult.data.emergencyContactPhoneNumber,
+            emergencyContactFullName: "",
+            emergencyContactPhoneNumber: "",
             githubLink: validationResult.data.github,
             linkedinLink: validationResult.data.linkedin,
             portfolioLink: validationResult.data.portfolio,
