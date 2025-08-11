@@ -75,8 +75,8 @@ export const apply = async (_prevState: any, formData: FormData) => {
         linkedin,
         portfolio,
         resume,
-        emergencyContactFullName,
-        emergencyContactPhoneNumber: emergencyContactPhone,
+        emergencyContactFullName: "",
+        emergencyContactPhoneNumber: "",
     });
 
     if (!validationResult.success) {
