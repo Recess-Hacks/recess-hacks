@@ -9,7 +9,7 @@ export default function FaqSection() {
         },
         {
             title: "Who can participate?",
-            description: "RecessHacks is open exclusively to high school + early univeristy / under 20 students, no prior experience required!. Whether you’re a seasoned hacker or a first-time coder, we welcome you to join us for a day of learning, building, and fun! 🤗🤗"
+            description: "RecessHacks is open exclusively to high school + early univeristy students, no prior experience required!. Whether you’re a seasoned hacker or a first-time coder, we welcome you to join us for a day of learning, building, and fun! 🤗🤗"
         },
         {
             title: "What if I don’t know how to code?",

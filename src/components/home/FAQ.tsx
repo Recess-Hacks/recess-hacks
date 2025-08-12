@@ -9,7 +9,7 @@ import { ScrollReveal } from '@/components/ui/scroll-reveal';
 const faqItems = [
   {
     question: "Who can participate in Recess Hacks?",
-    answer: "Recess Hacks is designed for high school students from around the world. If you're currently enrolled in high school or equivalent secondary education, you're eligible to participate regardless of your programming experience or skill level."
+    answer: "Recess Hacks is designed for high school + early univeristy students from around the world. If you're currently enrolled in high school or equivalent secondary education, you're eligible to participate regardless of your programming experience or skill level."
   },
   {
     question: "Do I need to have coding experience?",
