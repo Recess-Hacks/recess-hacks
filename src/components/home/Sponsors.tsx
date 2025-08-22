@@ -93,13 +93,19 @@ const sponsors: Sponsor[] = [
     name: "Leading Aces Academy",
     tier: "platinum",
     logo: `Leading-Aces.png`,
-    url: "https://leadaces.example/"
+    url: "https://www.leadingaces.com/"
   },
   {
     name: "Nodalli",
     tier: "gold",
     logo: `Nodalli.png`,
-    url: "https://nodalli.example/"
+    url: "https://www.nodalli.com/"
+  },
+  {
+    name: "Nexos",
+    tier: "gold",
+    logo: `Nexos.png`,
+    url: "https://nexos.ai/"
   }
 ];
 
