@@ -57,7 +57,7 @@ const sponsors: Sponsor[] = [
     name: "NordVPN",
     tier: "silver",
     logo: `NordVPN.png`,
-    url: "https://nordvpn.com"
+    url: "https://nordvpn.com/hackathons"
   },
   {
     name: "NordProtect",
